@@ -1,4 +1,5 @@
-﻿using Storage;
+﻿using Storage.Entities;
+using Storage.Operations;
 
 internal class Program
 {

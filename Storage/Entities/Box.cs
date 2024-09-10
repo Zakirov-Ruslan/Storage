@@ -1,6 +1,8 @@
-﻿namespace Storage
+﻿using Storage.Interfaces;
+
+namespace Storage.Entities
 {
-    public class Box
+    public class Box : IMeasurable, IWeighty
     {
         private long _id;
         private int _width;
@@ -11,9 +13,8 @@
         private DateTime? _productionDate;
         private DateTime? _expirationDate;
 
-
         public long Id { get => _id; }
-        public int Weight { get => _weight;  }
+        public int Weight { get => _weight; }
         public int Width { get => _width; }
         public int Height { get => _height; }
         public int Depth { get => _depth; }

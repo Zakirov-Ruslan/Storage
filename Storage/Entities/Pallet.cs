@@ -1,13 +1,14 @@
-﻿namespace Storage
+﻿using Storage.Interfaces;
+
+namespace Storage.Entities
 {
-    public class Pallet
+    public class Pallet : IMeasurable, IWeighty
     {
         private long _id;
         private int _width;
         private int _height;
         private int _depth;
         private List<Box> _boxes;
-
 
         public long Id { get => _id; }
         public int Width { get => _width; }
@@ -17,7 +18,6 @@
         public List<Box> Boxes { get => _boxes; }
         public int Size { get => _boxes.Sum(box => box.Size) + _height * _width * _depth; }
         public DateTime ExpirationDate { get => _boxes.Min(box => box.ExpirationDate.Date); }
-
 
         public Pallet(long id, int width, int height, int depth, List<Box> boxes)
         {

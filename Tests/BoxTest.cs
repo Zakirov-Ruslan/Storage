@@ -1,4 +1,4 @@
-using Storage;
+using Storage.Entities;
 
 namespace Tests
 {
