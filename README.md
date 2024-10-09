@@ -55,3 +55,5 @@ SQL
 - Entity Framework
   - Минусы и плюсы разных способов обозначения первичных ключей
   - Разница между IEnumerable и IQueryable
+- Тестирование с использованием MSTest и NUnit
+  - AAA паттерн   
